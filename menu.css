@@ -29,17 +29,25 @@ img {
     flex-direction: column;
 }
 
+.header__arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    color: red;  
+}
+
 .header__logo {
     width: 100%;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 32px;
     font-weight: 100;
     padding: 10px;
     background-color: white;
 }
 
 .header__picture {
-    width: 100%s;
+    width: 100%;
 }
 
 .header__icon {
@@ -53,11 +61,11 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: yellow;
+    background-color: whitesmoke;
     padding: 40px 0;
-    margin-top: 0px;
+    margin-top: -60px;
     border-radius: 40px 40px 0 0;
-    z-index: 100;
+    position: relative;
 }
 
 .resto__title {

@@ -1,0 +1,24 @@
+.like {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    &> .far {
+        position: relative;
+        font-size: 2.8rem;
+        color: red;
+    }
+    &> .fas {
+        font-size: 1.6rem;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: bottom;
+        transition: transform 1000ms, opacity 2000ms;
+    }
+    &:hover {
+        & > .fas {
+            color: $color-primary;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}

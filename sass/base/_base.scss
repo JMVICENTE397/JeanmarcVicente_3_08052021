@@ -1,0 +1,11 @@
+/* Initialistion des marges */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+/* Initialisation des liens hypertextes */
+a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: unset;
+}

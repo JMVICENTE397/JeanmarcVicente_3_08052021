@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="menu.css"/>
+        <link rel="stylesheet" href="./public/css/style.css"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <title>ohmyfood</title>
@@ -13,29 +13,38 @@
     <body>
         
         <header class="header">
+            <a href="./index.html" class="header__link"><i class="fas fa-arrow-left"></i></a>
             <h1 class="header__logo">ohmyfood</h1>
-            <img class="header__picture" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
+            <img class="header__picture" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
         </header>
 
         <main>
 
-            <section class="resto">
-                <div class="resto-container">
-                    <h1 class="resto__title">La palette du goût</h1>
-                    <i class="resto__icon far fa-heart"></i>
+            <section class="menu">
+                <h1 class="menu__title">La palette du goût</h1>
+                <div class="menu__like">
+                    <i class="fas fa-heart"></i>
+                    <i class="far fa-heart"></i>
                 </div>
             </section>
 
             <section class="submenu">
                 <h2 class="submenu__title">Entrées</h2>
                 <div class="submenu__underline"></div>
+
                 <div class="dish">
-                    <h3 class="dish__title">Fricassée d'escargot</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Au piment d'espelette</p>
-                        <p class="dish__price">25€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Fricassée d'escargot</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Au piment d'espelette</p>
+                            <p class="dish-w2__price">25€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish__check">
+                        <i class="fas fa-check-circle"></i>
                     </div>
                 </div>
+
                 <div class="dish">
                     <h3 class="dish__title">Foie gras de canard mi-cuit</h3>
                     <div class="dish-container">
@@ -81,13 +90,20 @@
             <section class="submenu">
                 <h2 class="submenu__title">Desserts</h2>
                 <div class="submenu__underline"></div>
+                
                 <div class="dish">
-                    <h3 class="dish__title">Paris-Brest</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Revisité</p>
-                        <p class="dish__price">18€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Paris-Brest</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Revisité</p>
+                            <p class="dish-w2__price">18€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish__check">
+                        <i class="fas fa-check-circle"></i>
                     </div>
                 </div>
+                
                 <div class="dish">
                     <h3 class="dish__title">Macaron au chocolat d'exception</h3>
                     <div class="dish-container">
@@ -105,7 +121,7 @@
             </section>
 
             <section class="command">
-                <button class="command__button">Commander</button>
+                <button class="button">Commander</button>
             </section>
 
         </main>

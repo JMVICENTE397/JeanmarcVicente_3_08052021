@@ -1,0 +1,110 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $color-background;
+    padding: 30px 0 20px;
+    margin-top: -60px;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    &__title {
+        padding-left: 20px;
+    }
+    &__like {
+        @include like;
+        right: 32px;
+        bottom: 32px;
+    }
+}
+
+.submenu {
+    background-color: $color-background;
+    padding-bottom: 20px;
+    &__title {
+        font-weight: 100;
+        text-transform: uppercase;
+        padding: 10px 20px;
+    }
+    &__underline {
+        width: 40px;
+        height: 3px;
+        background-color: $color-tertiary;
+        margin: 0 0 20px 20px;
+    }
+}
+
+.dish {
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 20px 20px;
+    @include shadow;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    &-w1 {
+        width: 100%;
+        min-width: 100%;
+        transform: scale(1);
+        &__title {
+            padding: 15px 0 0 15px;
+        }
+    }
+    &-w2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__subtitle {
+            padding: 5px 0 15px 15px;
+        }
+        &__price {
+            padding: 5px 20px 15px;
+            font-weight: bold;
+        }
+    }
+    &__check {
+        display: flex;
+        width: 0;
+        transition: width 1000ms;
+        // min-width: 0;
+        justify-content: center;
+        background-color: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+        & > i {
+            padding: 25px 20px;
+            color: white;
+            font-size: 25px;
+        }
+    }
+    &:hover {
+        & > .dish__check {
+            width: 50px;
+            // transform : scaleX(0.7);
+            // transition: width 
+            // transition: width transform 1000ms 0s ease-in-out;
+            // animation: check 2000ms;
+        }
+    }
+}
+
+@keyframes check {
+    0% {
+        width: 0;
+        min-width: 0;
+    }
+    100% {
+        width: 60px;
+        min-width: 60px;
+    }
+}
+
+.command {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-background;
+    padding: 20px 0 60px;
+    &__button {
+        @include button;
+    }
+}

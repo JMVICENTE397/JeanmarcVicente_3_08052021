@@ -1,0 +1,46 @@
+ol {
+    list-style: none;
+    counter-reset: compteur;
+}
+
+ol li::before {
+    content: counter(compteur)"";
+    counter-increment: compteur 1;
+    color: white;
+    padding: 2px;
+    margin-left: -35px;
+    background: $color-primary;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    width: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.operating {
+    margin-top: 40px;
+    &__title {
+        padding: 0 20px 20px;
+    }
+    &__button {
+        border: none;
+        background-color: $color-background;
+        padding: 25px;
+        border-radius: 20px;
+        margin: 0 20px 20px 40px;
+        font-weight: bold;
+        @include shadow;
+        &:hover {
+            background-color: lighten($color-primary, 30%);
+            @include shadow-hover;
+            >.operating__icon {
+                color: $color-primary;
+            }
+        }
+    }
+    &__icon {
+        width: 15px;
+        margin: 0 15px;
+        font-size: 0.9rem;
+    }
+}
