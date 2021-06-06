@@ -1,24 +1,31 @@
 .like {
+    background-color: transparent;
     position: absolute;
-    bottom: 25px;
     right: 25px;
-    &> .far {
-        position: relative;
-        font-size: 2.8rem;
-        color: red;
-    }
-    &> .fas {
-        font-size: 1.6rem;
+    bottom: 20px;
+    font-size: 2rem;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    z-index: 1;
+    &--gradient {
+        z-index: -1;
+        background: linear-gradient(355deg, $color-primary, $color-secondary);
+        position: absolute;
+        right: 25px;
+        bottom: 20px;
+        font-size: 2rem;
         transform: scale(0);
-        opacity: 0;
         transform-origin: bottom;
-        transition: transform 1000ms, opacity 2000ms;
-    }
+        opacity: 0;
+        transition: transform 1000ms 500ms ease-in-out, opacity 1000ms 500ms ease-in-out;
+        }
     &:hover {
-        & > .fas {
-            color: $color-primary;
+        opacity: 0;
+        z-index: -1;
+        & + .like--gradient {
             transform: scale(1);
             opacity: 1;
+            z-index: 1;
         }
     }
 }
