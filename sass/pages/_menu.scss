@@ -11,9 +11,35 @@
         padding-left: 20px;
     }
     &__like {
-        @include like;
+        background-color: $color-background;
+        position: absolute;
         right: 32px;
         bottom: 32px;
+        font-size: 1.6rem;
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+        z-index: 1;
+        &--gradient {
+            z-index: -1;
+            background: linear-gradient(355deg, $color-primary, $color-secondary);
+            position: absolute;
+            right: 32px;
+            bottom: 32px;
+            font-size: 1.6rem;
+            transform: scale(0);
+            transform-origin: bottom;
+            opacity: 0;
+            transition: transform 1000ms 500ms ease-in-out, opacity 1000ms 500ms ease-in-out;
+            }
+        &:hover {
+            opacity: 0;
+            z-index: -1;
+            & + .menu__like--gradient {
+                transform: scale(1);
+                opacity: 1;
+                z-index: 1;
+            }
+        }
     }
 }
 
@@ -34,18 +60,32 @@
 }
 
 .dish {
+    animation: dish-push 1000ms ease-in-out;
     background-color: white;
     border-radius: 15px;
     margin: 0 20px 20px;
     @include shadow;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     overflow: hidden;
+    &--1 {
+        animation-delay: 150ms;
+    }
+    &--2 {
+        animation-delay: 300ms;
+    }
+    &--3 {
+        animation-delay: 450ms;
+    }
     &-w1 {
-        width: 100%;
-        min-width: 100%;
-        transform: scale(1);
+        display: flex;
+        flex-direction: column;
+        flex: 100%;
         &__title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
             padding: 15px 0 0 15px;
         }
     }
@@ -55,45 +95,41 @@
         justify-content: space-between;
         &__subtitle {
             padding: 5px 0 15px 15px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         &__price {
-            padding: 5px 20px 15px;
+            padding: 5px 15px 15px;
             font-weight: bold;
+            text-align: right;
+            flex: 30px;
         }
     }
-    &__check {
+    &-w3 {
         display: flex;
+        align-items: center;
+        justify-content: left;
         width: 0;
         transition: width 1000ms;
         // min-width: 0;
-        justify-content: center;
         background-color: $color-tertiary;
         border-radius: 0 15px 15px 0;
-        & > i {
-            padding: 25px 20px;
+        &__check {
             color: white;
             font-size: 25px;
+            padding: 25px;
+            transform: rotate(0deg);
+            transition: transform 1000ms 200ms ease-in-out;
         }
     }
     &:hover {
-        & > .dish__check {
-            width: 50px;
-            // transform : scaleX(0.7);
-            // transition: width 
-            // transition: width transform 1000ms 0s ease-in-out;
-            // animation: check 2000ms;
+        & > .dish-w3 {
+            width: 75px;
+            & > .dish-w3__check {
+                transform: rotate(360deg);
+            }
         }
-    }
-}
-
-@keyframes check {
-    0% {
-        width: 0;
-        min-width: 0;
-    }
-    100% {
-        width: 60px;
-        min-width: 60px;
     }
 }
 
@@ -106,5 +142,24 @@
     padding: 20px 0 60px;
     &__button {
         @include button;
+    }
+}
+
+@keyframes dish-push {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    // 40% {
+    //     opacity: 0.2;
+    //     transform: translateY(10px);
+    // }
+    // 80% {
+    //     opacity: 0.8;
+    //     transform: translateY(5px);
+    // }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

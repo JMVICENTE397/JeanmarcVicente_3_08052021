@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
         <link rel="stylesheet" href="./public/css/style.css"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -22,17 +23,15 @@
 
             <section class="menu">
                 <h1 class="menu__title">La palette du goût</h1>
-                <div class="menu__like">
-                    <i class="fas fa-heart"></i>
-                    <i class="far fa-heart"></i>
-                </div>
+                <i class="menu__like far fa-heart"></i>
+                <i class="menu__like--gradient fas fa-heart fa-inverse" data-fa-mask="fa fa-square-full"></i> 
             </section>
 
             <section class="submenu">
                 <h2 class="submenu__title">Entrées</h2>
                 <div class="submenu__underline"></div>
 
-                <div class="dish">
+                <div class="dish dish--1">
                     <div class="dish-w1">
                         <h3 class="dish-w1__title">Fricassée d'escargot</h3>
                         <div class="dish-w2">
@@ -40,56 +39,88 @@
                             <p class="dish-w2__price">25€</p>
                         </div>                      
                     </div>
-                    <div class="dish__check">
-                        <i class="fas fa-check-circle"></i>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="dish">
-                    <h3 class="dish__title">Foie gras de canard mi-cuit</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Et ses copeaux de truffe noire</p>
-                        <p class="dish__price">35€</p>
+                <div class="dish dish--2">
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Foie gras de canard mi-cuit</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Et ses copeaux de truffe noire</p>
+                            <p class="dish-w2__price">35€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
-                <div class="dish">
-                    <h3 class="dish__title">Oeuf au plat</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Assaisonné à la truffe sur lit de salade</p>
-                        <p class="dish__price">20€</p>
+
+                <div class="dish dish--3">
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Oeuf au plat</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Assaisonné à la truffe sur lit de salade</p>
+                            <p class="dish-w2__price">20€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
+
             </section>
 
             <section class="submenu">
                 <h2 class="submenu__title">Plats</h2>
                 <div class="submenu__underline"></div>
+
                 <div class="dish">
-                    <h3 class="dish__title">Filet de boeuf aux herbes</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Accompagné de sa ribambelle de légumes</p>
-                        <p class="dish__price">40€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Filet de boeuf aux herbes</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Accompagné de sa ribambelle de légumes</p>
+                            <p class="dish-w2__price">40€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
+
                 <div class="dish">
-                    <h3 class="dish__title">Parmentier de queue de boeuf</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">A la truffe noire sur sa puére de panais</p>
-                        <p class="dish__price">35€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Parmentier de queue de boeuf</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">A la truffe noire sur sa purée de panais</p>
+                            <p class="dish-w2__price">35€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
+
                 <div class="dish">
-                    <h3 class="dish__title">Filet de Turbot</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Aux agrumes</p>
-                        <p class="dish__price">44€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Filet de turbot</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Aux agrumes</p>
+                            <p class="dish-w2__price">44€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
+
             </section>
 
             <section class="submenu">
                 <h2 class="submenu__title">Desserts</h2>
                 <div class="submenu__underline"></div>
+
                 
                 <div class="dish">
                     <div class="dish-w1">
@@ -99,25 +130,37 @@
                             <p class="dish-w2__price">18€</p>
                         </div>                      
                     </div>
-                    <div class="dish__check">
-                        <i class="fas fa-check-circle"></i>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
-                
+
                 <div class="dish">
-                    <h3 class="dish__title">Macaron au chocolat d'exception</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Et glace à la vanille de Madagascar</p>
-                        <p class="dish__price">22€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Macaron au chocolat d'exception</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Et glace à la vanille de Madagascar</p>
+                            <p class="dish-w2__price">22€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
+
                 <div class="dish">
-                    <h3 class="dish__title">Mousse au chocolat</h3>
-                    <div class="dish-container">
-                        <p class="dish__subtitle">Au piment d'espelette et à la truffe noire</p>
-                        <p class="dish__price">23€</p>
+                    <div class="dish-w1">
+                        <h3 class="dish-w1__title">Mousse au chocolat</h3>
+                        <div class="dish-w2">
+                            <p class="dish-w2__subtitle">Au piment d'espelette et à la truffe noire</p>
+                            <p class="dish-w2__price">23€</p>
+                        </div>                      
+                    </div>
+                    <div class="dish-w3">
+                        <i class="dish-w3__check fas fa-check-circle"></i>
                     </div>
                 </div>
+
             </section>
 
             <section class="command">
