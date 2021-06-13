@@ -15,6 +15,7 @@
   }
   to {
     transform: rotate(5turn);
+    color: transparent;
   }
 }
 
@@ -28,7 +29,7 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    opacity: 0;
+    opacity: 1;
     animation: loader-opacity 5000ms ease-in-out;
   }
   &__item {
@@ -37,8 +38,8 @@
     height: $size;
     margin:5em;  
     border-radius:50%;
-    animation: loader-balls 5000ms linear;
-    box-shadow: ($size*1.2) 0 0 0 $color-primary, ($size/-2) (-$size) 0 0 $color-secondary, ($size/-2) ($size) 0 0 $color-tertiary;
+    animation: loader-balls 5000ms linear forwards;
+    box-shadow: 1.2em 0 0 0 $color-primary, -0.5em -1em 0 0 $color-secondary, -0.5em 1em 0 0 $color-tertiary;
   }
 }
 

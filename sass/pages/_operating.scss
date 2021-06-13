@@ -18,9 +18,10 @@ ol li::before {
 }
 
 .operating {
-    margin-top: 40px;
+    padding: 20px 0 20px;
+    background-color: white;
     &__title {
-        padding: 0 20px 20px;
+        padding: 20px 20px 20px;
     }
     &__button {
         border: none;
@@ -43,4 +44,22 @@ ol li::before {
         margin: 0 15px;
         font-size: 0.9rem;
     }
+}
+
+@media screen and (min-width : 768px) {
+
+    .operating {
+        padding: 30px 0 20px;
+        flex: 100%;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        &__button {
+            flex: 30%;
+        }
+    }
+
+    .operating ol {
+        display: flex;
+    }
+    
 }
