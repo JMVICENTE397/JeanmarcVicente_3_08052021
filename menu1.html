@@ -4,10 +4,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
         <link rel="stylesheet" href="./public/css/style.css"/>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
         <title>ohmyfood</title>
     </head>
 
@@ -23,8 +21,10 @@
 
             <section class="menu">
                 <h1 class="menu__title">La palette du goût</h1>
-                <i class="like far fa-heart"></i>
-                <i class="like--gradient fas fa-heart fa-inverse" data-fa-mask="fa fa-square-full"></i> 
+                <div class="menu__like">
+                    <i class="like far fa-heart"></i>
+                    <i class="like--gradient fas fa-heart"></i>
+                </div>
             </section>
 
             <section class="submenu">
@@ -176,7 +176,7 @@
         <a href="#" class="footer__link"><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a>
         <a href="#" class="footer__link"><i class="footer__icon fas fa-hands-helping"></i>Devenir partenaire</a>
         <a href="#" class="footer__link">Mentions légales</a>
-        <a href="#" class="footer__link">Contact</a>
+        <a href="mailto:contact@ohmyfood.com" class="footer__link">Contact</a>
     </footer>
 
 </html>

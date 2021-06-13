@@ -1,15 +1,9 @@
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: red;
-    padding: 30px 0 10px;
-    margin-top: -60px;
-    border-radius: 40px 40px 0 0;
     position: relative;
-    &__title {
-        padding-left: 20px;
-    }
+    background-color: $color-background;
+    padding: 20px 20px 10px;
+    margin-top: -40px;
+    border-radius: 40px 40px 0 0;
 }
 
 .submenu {
@@ -29,7 +23,7 @@
 }
 
 .dish {
-    animation: dish-push 1000ms ease-in-out;
+    animation: dish-push 1000ms ease-out;
     background-color: white;
     border-radius: 15px;
     margin: 0 20px 20px;
@@ -39,13 +33,13 @@
     flex-wrap: nowrap;
     overflow: hidden;
     &--1 {
-        animation-delay: 150ms;
-    }
-    &--2 {
         animation-delay: 300ms;
     }
+    &--2 {
+        animation-delay: 600ms;
+    }
     &--3 {
-        animation-delay: 450ms;
+        animation-delay: 900ms;
     }
     &-w1 {
         display: flex;
