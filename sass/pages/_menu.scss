@@ -11,6 +11,7 @@
     padding-bottom: 20px;
     &__title {
         font-weight: 100;
+        font-size: map-get($map: $font-size, $key: medium);
         text-transform: uppercase;
         padding: 10px 20px;
     }
@@ -50,7 +51,7 @@
         flex: 100%;
         min-width: 0;
         &__title {
-            padding: 15px 0 0 15px;
+            padding: 10px 0 0 15px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -61,13 +62,13 @@
         flex-direction: row;
         // justify-content: space-between;
         &__subtitle {
-            padding: 5px 0 15px 15px;
+            padding: 5px 0 10px 15px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
         }
         &__price {
-            padding: 5px 15px 15px;
+            padding: 5px 15px 10px;
             font-weight: bold;
             text-align: right;
             flex: 30px;
@@ -84,7 +85,7 @@
         &__check {
             color: white;
             font-size: 25px;
-            padding: 25px;
+            padding: 20px;
             transform: rotate(0deg);
             transition: transform 800ms 200ms ease-in-out;
         }
@@ -110,18 +111,8 @@
     }
 }
 
-@keyframes dish-push {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@media screen and (min-width : 768px) {
+/* Tablettes paysage et desktop */
+@media screen and (min-width : 900px) {
 
     main {
         display: flex;
@@ -141,5 +132,23 @@
 
     .command {
         flex: 100%;
+    }
+}
+/* Galaxy Fold */
+@media screen and (max-width : 300px) {
+    .dish {
+        &-w1 {
+            &__title {
+                font-size: 0.9rem;
+            }
+        }
+        &-w2 {
+            &__subtitle {
+                font-size: 0.8rem;
+            }
+            &__price {
+                font-size: 0.9rem;
+            }
+        }
     }
 }

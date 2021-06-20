@@ -7,22 +7,29 @@ a {
 
 h1 {
     font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     font-weight: 100;
 }
 
 h2 {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 1000;
 }
 
 h3, a {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-overflow: ellipsis;
+    font-size: map-get($map: $font-size, $key: large);
+}
+
+h4 {
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
 p, li {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
+    font-size: map-get($map: $font-size, $key: medium )
 }

@@ -28,7 +28,7 @@ ol li::before {
         background-color: $color-background;
         padding: 25px;
         border-radius: 20px;
-        margin: 0 20px 20px 40px;
+        margin: 0 20px 20px 30px;
         font-weight: bold;
         @include shadow;
         &:hover {
@@ -42,7 +42,7 @@ ol li::before {
     &__icon {
         width: 15px;
         margin: 0 15px;
-        font-size: 0.9rem;
+        font-size: map-get($map: $font-size, $key:medium)
     }
 }
 
@@ -51,15 +51,17 @@ ol li::before {
     .operating {
         padding: 30px 0 20px;
         flex: 100%;
-        flex-flow: row wrap;
-        justify-content: space-around;
+        flex-flow: row nowrap;
+        justify-content: center;
         &__button {
             flex: 30%;
+            max-width: 250px;
         }
     }
 
     .operating ol {
         display: flex;
+        justify-content: center;
     }
     
 }

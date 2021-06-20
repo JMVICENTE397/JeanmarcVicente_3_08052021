@@ -36,20 +36,20 @@
     &__picture {
         width: 100%;
         height: auto;
-        max-height: 300px;
+        max-height: 200px;
         object-fit: cover;
         // aspect-ratio: 16/9;
         border-radius: 20px 20px 0 0;
     }
     &__title {
         background-color: inherit;
-        font-size: 1rem;
-        font-weight: bold;
+        font-size: map-get($map: $font-size, $key: large);
+        font-weight: 1000;
         padding: 10px 15px 0;
     }
     &__subtitle {
         background-color: inherit;
-        font-size: 0.9rem;
+        font-size: map-get($map: $font-size, $key: medium);
         padding: 5px 15px 15px;
         border-radius: 0 0 20px 20px;
     }
@@ -69,7 +69,8 @@
 
     .card {
         margin: 20px;
-        flex: 42%;
+        flex: 40%;
+        max-width: 400px;
     }
 
 }

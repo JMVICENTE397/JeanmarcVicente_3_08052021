@@ -1,13 +1,15 @@
+@import "./utils/variables";
+
 @import "./base/base";
 @import "./base/typography";
 
-@import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/functions";
 
 @import "./components/buttons";
 @import "./components/like";
 @import "./components/loader";
+@import "./components/animations";
 
 @import "./layout/header";
 @import "./layout/footer";
