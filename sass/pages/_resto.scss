@@ -57,14 +57,14 @@
     }
 }
 
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 768px) and (max-width : 1919px) {
 
     .resto {
         &__wrapper {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            align-items: stretch;
+            align-items: center;
             justify-content: center
         }
     }
@@ -73,6 +73,24 @@
         margin: 20px;
         flex: 40%;
         max-width: 400px;
+    }
+
+}
+
+@media screen and (min-width : 1920px) {
+
+    .resto {
+        &__wrapper {
+            flex: 100%;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+        }
+    }
+
+    .card {
+        margin: 20px;
+        flex: 25%;
+        // max-width: 400px;
     }
 
 }

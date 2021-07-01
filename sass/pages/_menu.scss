@@ -60,7 +60,6 @@
     &-w2 {
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
         &__subtitle {
             padding: 5px 0 10px 15px;
             white-space: nowrap;
@@ -139,15 +138,15 @@
     .dish {
         &-w1 {
             &__title {
-                font-size: 0.9rem;
+                font-size: map-get($map: $font-size, $key: small);
             }
         }
         &-w2 {
             &__subtitle {
-                font-size: 0.8rem;
+                font-size: map-get($map: $font-size, $key: xs);
             }
             &__price {
-                font-size: 0.9rem;
+                font-size: map-get($map: $font-size, $key: small);
             }
         }
     }
